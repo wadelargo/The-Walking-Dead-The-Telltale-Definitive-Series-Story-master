@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Shadows+Into+Light&family=Thasadith:wght@400;700&display=swap');
+/* Colors
+color-shade-1: #A57D32
+color-shade-2: #8A724E
+color-shade-3: #1D0205
+color-shade-4: #8d5e18
+
+
+font-family: 'Bowlby One SC', cursive;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Thasadith', sans-serif;
+*/
+:root {
+    --bg-dark: #000;
+    --color-shade-1: #caab72;
+    --color-shade-2: #d68914;
+    --color-shade-3: #8d5e18;
+    --color-shade-4: #1D0205;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Bowlby One SC', cursive;
+    background-color: var(--color-shade-1);
+    color: #1D0205;
+    overflow: hidden;
+}
+
+h1, h2 {
+    font-size: 1.875rem;
+    padding-bottom: 0.625rem;
+    text-shadow: 0.1875rem 0.1875rem 0.0625rem #8d5e18;
+}
+
+p {
+    font-family: 'Arial', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #f4f4f4;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-shade-2);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #8d5e18;
+    background-color: var(--color-shade-4);
+    padding: 1.0625rem 2.5rem;
+    margin: 0 0.3125rem;
+    border-radius: 0.125rem;
+    transition: all .4s ease-in-out;
+}
+
+.btn-next:hover {
+    background-color: var(--color-shade-3);
+    color: #1D0205;
+}
+
+.btn-prev {
+    background-color: var(--color-shade-3);
+    color: #1D0205;
+}
+
+.btn-prev:hover {
+    background-color: var(--color-shade-4);
+    color: #8d5e18;
+}
+
+.bg-wrap-dark {
+    background-color: rgba(22,22,22,0.7);
+    border-radius: 0.1875rem;
+}
+
+.bg-wrap-primary {
+    background-color: rgb(214, 137, 20, 0.7);
+    border-radius: 0.1875rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    padding: 1.25rem;
+    background-image: url(/img/header-one.jpg);
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.2);
+}
+.hero * {
+    z-index: 10;
+}
+
+.hero-content {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 2.1875rem;
+    margin-bottom: 0.625rem;
+    transform: translateY(-62.5rem);
+    animation: slideY 1s forwards ease-out;
+}
+
+.hero-content p {
+    line-height: 1.4;
+    margin: 0 auto;
+    color: #fff;
+    padding: 1rem;
+    max-width: 56.25rem;
+    transform: translateX(-125rem);
+    animation: slideX 1.4s forwards ease-in;
+}
+
+.hero-content .btn {
+    margin-top: 1.25rem;
+    padding: 1.0625rem 2.5rem;
+}
+
+/* Animation */
+@keyframes slideY {
+    from {
+        transform: translateY(-62.5rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideX {
+    from {
+        transform: translateX(-125rem);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Slide */
+.slide {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.slide .content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1.875rem;
+    font-size: 1.125rem;
+}
+
+.content p {
+    padding: 1.875rem 1.5625rem;
+    line-height: 1.5;
+    color: #f4f4f4;
+    margin-bottom: 0.9375rem;
+}
+
+/* Slide One */
+#slide-1 { background: url(/img/season-01.jpg)no-repeat top center/cover; }
+#slide-1 .content {
+    align-items: flex-start;
+    justify-content: center;
+}
+#slide-1 .content p {
+    max-width: 50rem;
+}
+
+/* Slide Two */
+#slide-2 { background: url(/img/400-days.jpg)no-repeat center center/cover; }
+#slide-2 .content {
+    align-items: flex-start;
+    justify-content: center; 
+    text-align: left;
+}
+#slide-2 .content p {
+    max-width: 43.75rem;
+}
+
+/* Slide Three */
+#slide-3 { background: url(/img/season-02.jpg)no-repeat top center/cover; }
+#slide-3 .content {
+    align-items: flex-start;
+    justify-content: center; 
+    text-align: left;
+}
+#slide-3 .content p {
+    max-width: 43.75rem;
+}
+
+/* Slide Four */
+#slide-4 { background: url(/img/michonne.png)no-repeat top center/cover; }
+#slide-4 .content {
+    align-items: flex-end;
+    justify-content: center; 
+    text-align: left;
+}
+#slide-4 .content p {
+    max-width: 43.75rem;
+}
+
+/* Slide Five */
+#slide-5 { background: url(/img/season-03.jpg)no-repeat top center/cover; }
+#slide-5 .content {
+    align-items: flex-start;
+    justify-content: center; 
+    text-align: left;
+}
+#slide-5 .content p {
+    max-width: 43.75rem;
+}
+
+/* Slide Six */
+#slide-6 { background: url(/img/final-season.jpg)no-repeat top center/cover; }
+#slide-6 .content {
+    align-items: flex-start;
+    justify-content: center; 
+    text-align: center;
+    margin-top: 3.75rem;
+}
+#slide-6 .content p {
+    max-width: 43.75rem;
+}
+
+#slide-6 .content .btn-up {
+    align-self: flex-end;
+    margin-top: 1.25rem;
+}
+
+.content .btn-up a {
+    background-color: #d68914;
+    padding: 0.125rem 0.625rem;
+    color: #fff;
+}
+
+.content .btn-up a:hover {
+    background-color: #1D0205;
+}
+
+/* Responsive */
+@media(max-width: 48rem) {
+    /* Main section */
+    .hero {
+        padding-top: 2.5rem;
+    }
+
+    .hero-content {
+        font-size: 1.0625rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.875rem;
+    }
+
+    .hero-content .btn {
+        margin-top: 0.9375rem;
+        padding: 0.9375rem 1.5625rem;
+        font-size: 0.9375rem;
+    }
+
+    /* Slides */
+    .slide .content {
+        padding: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .content p {
+        padding: 0.9375rem;
+    }
+
+    .btn {
+        padding: 0.9375rem 1.5625rem;
+    }
+}
